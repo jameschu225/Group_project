@@ -23,9 +23,9 @@
 	<div class="page-container">
 		<div class="details-container">
 			<p>This gift belongs in the "<c:out value="${gift.giftType}"/>" category 
-			and can be purchased at <c:out value="${gift.storeName}"/> for about $<c:out value="${gift.price}"/>.</p>
+			and can be purchased at <c:out value="${gift.storeName}"/> for about <c:out value="${numberFormat.format(gift.price)}"/>.</p>
 			<p>This present was posted by <c:out value="${gift.user.username}"/> and he/she may be contacted at <c:out value="${gift.contactInfo}"/>
-			before the requested date <c:out value="${gift.dateNeeded}"/>.</p>
+			before the requested date <c:out value="${dateFormat.format(dateNeeded)}"/>.</p>
 			<p><c:out value="${gift.user.username}"/> provided the following details / instructions regarding their gift idea: <c:out value="${gift.giftDetails}"/>.</p>
 		</div>
 	</div>
@@ -34,28 +34,29 @@
 		<input type="submit" value="Agree to Purchase" class="btn btn-success"/>
 	</form>
 		<div class="window">
-	    <div class="santa">
-	      <div class="head">
-	        <div class="face">
-	          <div class="redhat">
-	            <div class="whitepart"></div>
-	            <div class="redpart"></div>
-	            <div class="hatball"></div>
-	          </div>
-	          <div class="eyes"></div>
-	          <div class="beard">
-	            <div class="nouse"></div>
-	            <div class="mouth"></div>
-	          </div>
-	        </div>
-	        <div class="ears"></div>
-	      </div>
-	      <div class="body"></div>
-	    </div>
-	  </div>
-	  <div class="message">
-	    <h1>Merry Christmas!</h1>
-	    <p style="font-size:2px">pure css Santa Caul made with ♥ by Alireza Sheikholmolouki</p>
-	  </div>
+		    <div class="santa">
+		      <div class="head">
+		        <div class="face">
+		          <div class="redhat">
+		            <div class="whitepart"></div>
+		            <div class="redpart"></div>
+		            <div class="hatball"></div>
+		          </div>
+		          <div class="eyes"></div>
+		          <div class="beard">
+		            <div class="nouse"></div>
+		            <div class="mouth"></div>
+		          </div>
+		        </div>
+		        <div class="ears"></div>
+		      </div>
+		      <div class="body"></div>
+		    </div>
+		</div>
+		<div class="message">
+		  <h1>Merry Christmas!</h1>
+		  <p style="font-size:2px">pure css Santa Caul made with ♥ by Alireza Sheikholmolouki</p>
+		</div>
+	
 </body>
 </html>
